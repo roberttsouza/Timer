@@ -16,7 +16,8 @@ function twoDigits(digits){
 
 //arrowfunction para acrescentar um segundo ao relogio
 start = () => {
-  interval = setInterval(conter,1)
+  conter()
+  interval = setInterval(conter,1000)
 }
 
 //função para parar o relogio
@@ -26,6 +27,7 @@ pause = () => {
 //função para zerar o relogio
 stop = () => {
   clearInterval(interval)
+  hr=0
   min=0
   sec=0
   watch.innerHTML = `${twoDigits(hr)}:${twoDigits(min)}:${twoDigits(sec++)}`
