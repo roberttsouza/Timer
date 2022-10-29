@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Timer</title>
 </head>
@@ -11,11 +13,18 @@
   
   <main>
     <div class="container">
-      <h1 id="watch">00:00:00</h1>
-      <button class="start-btn" onclick="start()">Iniciar</button>
-      <button class="pause-btn" onclick="pause()">Pausar</button>
-      <button class="stop-btn" onclick="stop()">parar</button>
+      <div class="content">
+        <h1 id="watch">00:00:00</h1>
+        <button class="pause-btn btn" onclick="pause()"><i class="ri-stop-circle-line btni"></i></button>
+        <button class="start-btn btn" onclick="start()"><i class="ri-play-circle-line btni"></i></button>
+        <button class="stop-btn btn" onclick="stop()"><i class="ri-restart-line btni"></i></button>
+      </div>
     </div>
+
+
+
+
+    <footer> <p>Desenvolvedor <a href="https://robertt.netlify.app/" target="_blank">Robertt Souza <i class="ri-external-link-line"></i></a></p> </footer>
   </main>
   
 
