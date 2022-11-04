@@ -4,6 +4,7 @@ let sec = 00;
 let min = 00;
 let hr = 00;
 const watch = document.querySelector("#watch"); 
+var clicado = false;
 
 //função para adicionar um zero a frente dos variaveis
 function twoDigits(digits){
@@ -16,17 +17,26 @@ function twoDigits(digits){
 
 //arrowfunction para acrescentar um segundo ao relogio
 start = () => {
-  conter()
-  interval = setInterval(conter,1000)
+  if(!clicado){
+    conter();
+    interval = setInterval(conter,1000);
+    clicado = true;
+  } else if (!clicado){
+    pause()    
+  }
 }
 
 //função para parar o relogio
 pause = () => {
   clearInterval(interval)
+  interval = null;
+  clicado = false;
 }
 //função para zerar o relogio
 stop = () => {
   clearInterval(interval)
+  interval = null;
+  clicado = false;
   hr=0
   min=0
   sec=0
